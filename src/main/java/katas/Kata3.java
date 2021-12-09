@@ -16,6 +16,6 @@ public class Kata3 {
     public static List<Integer> execute() {
         List<MovieList> movieLists = DataUtil.getMovieLists();
 
-        return ImmutableList.of(1, 2, 3);
+        return movieLists.stream().flatMap(movie -> movie.getName());
     }
 }
